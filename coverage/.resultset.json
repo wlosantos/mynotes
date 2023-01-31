@@ -1,7 +1,19 @@
 {
   "RSpec": {
     "coverage": {
+      "/home/wendellopes/my/myNotes/app/models/note.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null
+        ]
+      }
     },
-    "timestamp": 1675187277
+    "timestamp": 1675189730
   }
 }
