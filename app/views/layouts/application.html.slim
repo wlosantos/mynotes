@@ -11,4 +11,7 @@ html
     = javascript_importmap_tags
 
   body class='bg-gray-100 w-full h-screen flex flex-col'
-    = yield
+    header
+      = render 'shared/menubar'
+    main class='flex-1 flex justify-center items-center'
+      = yield
