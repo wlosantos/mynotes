@@ -1,0 +1,21 @@
+section class='h-full container mx-auto'
+  div class='flex w-full justify-center mb-8'
+    div class='w-3/5 mt-16 space-y-8'
+      = link_to sanitize("&larr; back to notes"), notes_path, class: 'text-sky-500 text-sm font-medium mb-4 text-right block'
+      span class='bg-sky-500 text-white text-xs font-medium px-4 py-1 rounded-full'
+        = heroicon 'flag', options: { class: 'h-5 w-5 inline' }
+        = @note.priority
+      h1 class='text-3xl font-bold text-gray-800 leading-8'
+        = @note.title
+      span class='text-gray-400 text-sm'
+        = @note.user.email
+      p class='text-gray-600 text-sm mb-4'
+        == @note.content
+      p class='text-gray-600 text-sm flex items-center gap-2'
+        span
+          = heroicon 'calendar', options: { class: 'h-5 w-5 text-gray-500 inline-block' }
+        = @note.created_at.strftime('%B %d, %Y')
+
+      div class='flex gap-2'
+        = link_to 'Edit', edit_note_path(@note), class: 'text-sm text-white bg-sky-500 hover:bg-sky-600 rounded-lg px-4 py-2'
+        = link_to 'Delete', note_path(@note), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'text-sm text-white bg-red-500 hover:bg-red-600 rounded-lg px-4 py-2'
