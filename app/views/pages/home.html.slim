@@ -1,10 +1,9 @@
-div class='px-6 lg:w-1/2 mx-auto lg:-mt-[180px]'
-  = heroicon 'swatch', options:{class: 'h-16 w-16 text-sky-500'}
-  h1 class='text-5xl lg:text-7xl font-bold text-gray-800 pb-4'
-    | talentNotes
-  hr class='border-b border-sky-500/50 w-32'
-  h4 class='text-xl lg:text-3xl font-light mt-4 text-gray-600 shadow-lg p-6'
-    | Mantenha suas anotações, idéias, pensamentos bem guadados e organizados com níveis de prioridate!
-
-  div class='items-center mt-8 flex justify-center'
-    = link_to 'Entrar', new_user_session_path, class: 'bg-orange-500 px-8 py-3 rounded-full text-lg font-medium text-white shadow-lg hover:bg-orange-600 focus:outline-none focus:shodow-xs'
+div class='w-full lg:w-2/5 relative'
+  div class='flex justify-center'
+    div class='flex flex-col'
+      = heroicon 'swatch', options:{class: 'h-16 w-16 block text-sky-500 mr-2'}
+      h1 class='text-5xl lg:text-7xl font-bold text-gray-800'
+        = link_to 'talentNotes', root_path
+  div
+    h4 class='text-xl lg:text-2xl font-light mt-4 text-gray-600 text-center'
+      | Mantenha suas anotações, idéias, pensamentos bem guadados e organizados com níveis de prioridate!

@@ -10,8 +10,12 @@ html
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
 
-  body class='bg-gray-100 w-full h-screen flex flex-col'
-    header
-      = render 'shared/menubar'
-    main class='flex-1 flex justify-center items-center'
-      = yield
+  body class='bg-gray-100'
+    main class='flex flex-col h-screen'
+      header
+        = render 'shared/menubar'
+      section class='flex-1 p-4'
+        article class='flex items-center justify-center h-full'
+          = yield
+      section class='flex justify-center text-gray-500 text-sm my-4'
+        | w3n &copy; 2023. All rights reserved.
