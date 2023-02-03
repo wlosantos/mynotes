@@ -5,6 +5,7 @@ RSpec.describe Note, type: :model do
     context 'be sure columns are present' do
       it { should have_db_column(:title).of_type(:string) }
       it { should have_db_column(:priority).of_type(:string) }
+      it { should have_db_column(:content).of_type(:text) }
     end
 
     context 'indexes' do
@@ -19,6 +20,7 @@ RSpec.describe Note, type: :model do
   describe 'validations' do
     it { should validate_presence_of(:title) }
     it { should validate_presence_of(:priority) }
+    it { should validate_presence_of(:content) }
   end
 
   describe 'factories' do

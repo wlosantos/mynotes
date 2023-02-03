@@ -5,6 +5,7 @@
         "lines": [
           1,
           1,
+          null,
           1,
           null,
           1,
@@ -12,8 +13,43 @@
           1,
           null
         ]
+      },
+      "/home/wendellopes/my/myNotes/app/enumerations/priority.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/wendellopes/my/myNotes/spec/models/user_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1675189730
+    "timestamp": 1675465698
   }
 }
