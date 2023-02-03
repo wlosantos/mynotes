@@ -12,11 +12,11 @@ class NotesController < ApplicationController
   end
 
   def create
-    @note = Note.new(notes_params)
+    @note = current_user.notes.build(notes_params)
 
     respond_to do |format|
       if @note.save
-        format.html { redirect_to @note, notice: 'Note was successfully created.' }
+        format.html { redirect_to notes_path, notice: 'Note was successfully created.' }
       else
         render :new, status: :unprocessable_entity
       end

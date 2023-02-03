@@ -1,0 +1,5 @@
+= simple_form_for note, html: { class: 'mt-4 space-y-4' } do |f|
+        = f.input :title, label: false, input_html: { class: 'w-full border-gray-300 rounded-lg shadow placeholder:text-gray-400 focus:ring-0', placeholder: 'add new title ...' }
+        = f.input :content, label: false, as: :text, input_html: { class: 'w-full h-28 border-gray-300 rounded-lg shadow placeholder:text-gray-400 focus:ring-0', placeholder: 'add your description...' }
+        = f.input :priority, label: false, collection: Priority.list, include_blank: false, input_html: { class: 'border-gray-300 rounded-lg shadow placeholder:text-gray-400 focus:ring-0' }
+        = f.submit 'Create Note', class: 'bg-sky-500 text-white px-4 py-2 rounded-lg shadow hover:bg-sky-600 transition'

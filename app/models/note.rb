@@ -1,6 +1,7 @@
 class Note < ApplicationRecord
   belongs_to :user
-  has_rich_text :content
+
+  has_enumeration_for :priority, with: Priority, create_helpers: true
 
   validates :title, presence: true
   validates :content, presence: true

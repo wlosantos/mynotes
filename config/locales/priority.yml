@@ -1,0 +1,6 @@
+en:
+  enumerations:
+    priority:
+      low: 'Low'
+      medium: 'Medium'
+      high: 'High'
