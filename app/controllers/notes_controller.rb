@@ -28,7 +28,7 @@ class NotesController < ApplicationController
   def update
     respond_to do |format|
       if @note.update(notes_params)
-        format.html { redirect_to @note, notice: 'Note was successfully updated.' }
+        format.html { redirect_to notes_path, notice: 'Note was successfully updated.' }
       else
         render :edit, status: :unprocessable_entity
       end
@@ -49,6 +49,6 @@ class NotesController < ApplicationController
   end
 
   def notes_params
-    params.require(:note).permit(:title, :content)
+    params.require(:note).permit(:title, :content, :priority)
   end
 end
