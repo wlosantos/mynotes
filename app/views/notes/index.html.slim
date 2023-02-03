@@ -1,17 +1,3 @@
 section class='h-full w-full bg-cyan-50 px-4 py-6'
   div class='grid grid-cols-2 md:grid-cols-4 gap-4'
-    - @notes.each do |note|
-      div class='bg-white rounded-lg shadow-lg p-4 flex flex-col gap-3'
-        div class='flex justify-between items-start'
-          span class='text-xs px-2 py-1 bg-gray-300 rounded-full'
-            = note.priority
-          span
-            = heroicon 'ellipsis-horizontal', options: { class: 'h-5 w-5 text-gray-500' }
-        div class='flex-1'
-          h2 class='text-md font-semibold md:text-xl leading-tight'
-            = note.title
-          p class='text-sm text-gray-500 mt-2'
-            == note.content
-        div
-          small class='text-gray-400 text-right block tracking-tight'
-            = note.created_at.strftime('%d %b %Y')
+    =render @notes
