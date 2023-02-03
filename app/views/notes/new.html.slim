@@ -1,0 +1,6 @@
+section class='h-full container mx-auto'
+  div class='flex w-full justify-center'
+    div class='w-3/5 mt-16'
+      = link_to sanitize("&larr; back to notes"), notes_path, class: 'text-sky-500 text-sm font-medium mb-4 text-right block'
+      h1 class='text-3xl font-bold text-gray-800' New Note
+      = render 'form', note: @note
