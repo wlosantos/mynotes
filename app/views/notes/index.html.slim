@@ -1,3 +1,16 @@
-section class='h-full w-full bg-cyan-50 px-4 py-6'
-  div class='grid grid-cols-2 md:grid-cols-4 gap-4'
+section class='h-full w-full bg-cyan-50 relative -z-10'
+  div class='fixed w-full bg-sky-500 border-t-2 border-sky-600 px-2 py-2 lg:px-4 text-white'
+    div class='flex justify-between items-center gap-3'
+      div class='flex items-center gap-3 bg-white rounded px-2 py-2 text-sm text-sky-500'
+        span class='text-sm font-medium hidden md:block' sort by date:
+        = heroicon 'bars-arrow-down', options: { class: 'h-6 w-6' }
+        = heroicon 'bars-arrow-up', options: { class: 'h-6 w-6' }
+      div class='md:w-2/5 md:hidden'
+        = simple_form_for :search, url: notes_path, html:{} do |f|
+          = f.input :query, label: false, input_html: { class: 'w-full bg-white text-sm text-gray-800 px-4 py-2 rounded flex items-center border-white focus:ring-0 transition', placeholder: 'Search Notes' }
+      div
+        =link_to new_note_path, class: 'bg-white text-sky-500 md:px-4 px-2 py-2 rounded flex items-center border hover:border-white hover:bg-sky-500 hover:text-white transition' do
+          = heroicon 'document-plus', options: { class: 'h-6 w-6 md:pr-2' }
+          span class='text-sm font-medium hidden md:block' New Note
+  div class='grid grid-cols-2 md:grid-cols-4 gap-4 p-4 mt-16'
     =render @notes
